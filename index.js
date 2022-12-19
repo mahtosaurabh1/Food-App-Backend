@@ -7,12 +7,14 @@ const router = require('./Routes/routes');
 
 require('./db/config')
 
+const port = process.env.PORT ||5000
+
 app.use(cors())
 app.use(express.json())
 
 app.use('/',router);
 
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("running");
 })

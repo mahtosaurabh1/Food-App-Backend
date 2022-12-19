@@ -4,7 +4,9 @@ const { registerControler, loginControler } = require('../Controllers/authContro
 const { addreviewControler, getallReviewControler, deleteReviewControler } = require('../Controllers/reviewControlers');
 
 let router=express.Router();
-
+router.get("/",(req,res)=>{
+    res.send("hello")
+})
 router.post('/register',registerControler);
 router.post('/login',loginControler);
 router.get('/allplans',allplanControler);
